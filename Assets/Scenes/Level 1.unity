@@ -3116,7 +3116,7 @@ GameObject:
   - component: {fileID: 572386844}
   m_Layer: 0
   m_Name: Collision
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4186,6 +4186,22 @@ MonoBehaviour:
   m_DefaultActionMap: Player
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 519420031}
+--- !u!4 &741052587 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 2438050859030510488, guid: fe4839eb733011a49b0e62723a47f111, type: 3}
+  m_PrefabInstance: {fileID: 8737506010471735753}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &741052588 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4754499499935488725, guid: fe4839eb733011a49b0e62723a47f111, type: 3}
+  m_PrefabInstance: {fileID: 8737506010471735753}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 741052577}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d2fe5546f775c47d2820aa5e8a715f53, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1261137359
 GameObject:
   m_ObjectHideFlags: 0
@@ -4428,6 +4444,80 @@ MonoBehaviour:
   m_BoundingShape2D: {fileID: 1261137361}
   m_ConfineScreenEdges: 1
   m_Damping: 0
+--- !u!1 &1586493161
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1586493162}
+  - component: {fileID: 1586493163}
+  - component: {fileID: 1586493164}
+  m_Layer: 0
+  m_Name: FirePoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1586493162
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1586493161}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: -0.225, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 741052587}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!50 &1586493163
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1586493161}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
+--- !u!114 &1586493164
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1586493161}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f87f929e41d95cc47bc3ee6d63f287f4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sceneCamera: {fileID: 519420031}
+  rb: {fileID: 1586493163}
 --- !u!4 &1878847910 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7833813339690181516, guid: fe4839eb733011a49b0e62723a47f111, type: 3}
@@ -4531,7 +4621,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2438050859030510488, guid: fe4839eb733011a49b0e62723a47f111, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: -0.5
       objectReference: {fileID: 0}
     - target: {fileID: 3605877376935426326, guid: fe4839eb733011a49b0e62723a47f111, type: 3}
       propertyPath: m_Name
@@ -4546,9 +4636,27 @@ PrefabInstance:
       value: 1864453169
       objectReference: {fileID: 0}
     - target: {fileID: 4746138739099634968, guid: fe4839eb733011a49b0e62723a47f111, type: 3}
+      propertyPath: _data._json
+      value: '{"declarations":{"Kind":"Object","collection":{"$content":[{"name":"Health","value":{"$content":5,"$type":"System.Int32"},"typeHandle":{"Identification":"System.Int32,
+        mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089","$version":"A"},"$version":"A"},{"name":"Base
+        Speed","value":{"$content":5.0,"$type":"System.Single"},"typeHandle":{"Identification":"System.Single,
+        mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089","$version":"A"},"$version":"A"},{"name":"Scene
+        Camera","value":{"$content":0,"$type":"UnityEngine.Object"},"typeHandle":{"Identification":"UnityEngine.Camera,
+        UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null","$version":"A"},"$version":"A"},{"name":"Weapon","value":{"$content":1,"$type":"UnityEngine.Object"},"typeHandle":{"Identification":"Unity.VisualScripting.ScriptMachine,
+        Unity.VisualScripting.Flow, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null","$version":"A"},"$version":"A"}],"$version":"A"},"$version":"A"}}'
+      objectReference: {fileID: 0}
+    - target: {fileID: 4746138739099634968, guid: fe4839eb733011a49b0e62723a47f111, type: 3}
+      propertyPath: _data._objectReferences.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4746138739099634968, guid: fe4839eb733011a49b0e62723a47f111, type: 3}
       propertyPath: _data._objectReferences.Array.data[0]
       value: 
       objectReference: {fileID: 519420031}
+    - target: {fileID: 4746138739099634968, guid: fe4839eb733011a49b0e62723a47f111, type: 3}
+      propertyPath: _data._objectReferences.Array.data[1]
+      value: 
+      objectReference: {fileID: 741052588}
     - target: {fileID: 5491318685764264903, guid: fe4839eb733011a49b0e62723a47f111, type: 3}
       propertyPath: m_Camera
       value: 
@@ -4558,9 +4666,38 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 519420031}
     - target: {fileID: 7714684177763546833, guid: fe4839eb733011a49b0e62723a47f111, type: 3}
+      propertyPath: _data._json
+      value: '{"declarations":{"Kind":"Object","collection":{"$content":[{"name":"Base
+        Speed","value":{"$content":5.0,"$type":"System.Single"},"typeHandle":{"Identification":"System.Single,
+        mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089","$version":"A"},"$version":"A"},{"name":"Scene
+        Camera","value":{"$content":0,"$type":"UnityEngine.Object"},"typeHandle":{"Identification":"UnityEngine.Camera,
+        UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null","$version":"A"},"$version":"A"},{"name":"Bullet","value":{"$content":1,"$type":"UnityEngine.Object"},"typeHandle":{"Identification":"UnityEngine.GameObject,
+        UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null","$version":"A"},"$version":"A"},{"name":"Fire
+        Point","value":{"$content":2,"$type":"UnityEngine.Object"},"typeHandle":{"Identification":"UnityEngine.Transform,
+        UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null","$version":"A"},"$version":"A"},{"name":"Fire
+        Force","value":{"$content":20.0,"$type":"System.Single"},"typeHandle":{"Identification":"System.Single,
+        mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089","$version":"A"},"$version":"A"}],"$version":"A"},"$version":"A"}}'
+      objectReference: {fileID: 0}
+    - target: {fileID: 7714684177763546833, guid: fe4839eb733011a49b0e62723a47f111, type: 3}
+      propertyPath: _data._objectReferences.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 7714684177763546833, guid: fe4839eb733011a49b0e62723a47f111, type: 3}
       propertyPath: _data._objectReferences.Array.data[0]
       value: 
       objectReference: {fileID: 519420031}
+    - target: {fileID: 7714684177763546833, guid: fe4839eb733011a49b0e62723a47f111, type: 3}
+      propertyPath: _data._objectReferences.Array.data[1]
+      value: 
+      objectReference: {fileID: 8721410487533978587, guid: 441f3c540130a5749b654ab079572636, type: 3}
+    - target: {fileID: 7714684177763546833, guid: fe4839eb733011a49b0e62723a47f111, type: 3}
+      propertyPath: _data._objectReferences.Array.data[2]
+      value: 
+      objectReference: {fileID: 1586493162}
+    - target: {fileID: 7714684177763546833, guid: fe4839eb733011a49b0e62723a47f111, type: 3}
+      propertyPath: _data._objectReferences.Array.data[3]
+      value: 
+      objectReference: {fileID: 1586493163}
     - target: {fileID: 7833813339690181516, guid: fe4839eb733011a49b0e62723a47f111, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -4607,7 +4744,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
-    m_AddedGameObjects: []
+    m_AddedGameObjects:
+    - targetCorrespondingSourceObject: {fileID: 2438050859030510488, guid: fe4839eb733011a49b0e62723a47f111, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1586493162}
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 8049427012400254457, guid: fe4839eb733011a49b0e62723a47f111, type: 3}
       insertIndex: -1
