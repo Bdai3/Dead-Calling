@@ -6,11 +6,14 @@ using UnityEngine;
 public class EnemyController : MonoBehaviour
 {
     // Start is called before the first frame update
-    public int health;
+    public Transform attackPoint;       // Empty child object at the fist/weapon
+    public float attackRange = 0.5f;
+    public int attackDamage = 10;
+    public LayerMask playerLayer;
 
     void OggerEnter2D(Collider2D collision)
     {
-        if (collision.tag == "Bullet")
+        if (collision.CompareTag("Bullet"))
         {
             TakeDamage(collision.GetComponent<BulletScript>().damage);
         }
@@ -18,15 +21,21 @@ public class EnemyController : MonoBehaviour
 
     public void TakeDamage(int damageAmount)
     {
-        // Read current health
         int currentHealth = Variables.Object(gameObject).Get<int>("Health");
 
-        // Subtract damage
         currentHealth -= damageAmount;
 
-        // Write it back
         Variables.Object(gameObject).Set("Health", currentHealth);
 
+    }
+
+    public void OnAttackHit()
+    {
+        GameObject player = Variables.Scene(this).Get<GameObject>("Player");
+
+        int playerHealth = Variables.Object(player).Get<int>("Health");
+        playerHealth -= attackDamage;
+        Variables.Object(player).Set("Health", playerHealth);
     }
 
 }

@@ -2802,7 +2802,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1370567f8caee2847817e46c518b9fb0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 0
+  attackPoint: {fileID: 0}
+  attackRange: 0.5
+  attackDamage: 10
+  playerLayer:
+    serializedVersion: 2
+    m_Bits: 0
 --- !u!1 &277907236
 GameObject:
   m_ObjectHideFlags: 0
@@ -4534,6 +4539,53 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 7833813339690181516, guid: fe4839eb733011a49b0e62723a47f111, type: 3}
   m_PrefabInstance: {fileID: 8737506010471735753}
   m_PrefabAsset: {fileID: 0}
+--- !u!70 &1878847911
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1398221577}
+  m_Enabled: 0
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.0051329136, y: 0.029514372}
+  m_Size: {x: 0.5591767, y: 0.94097126}
+  m_Direction: 0
+--- !u!114 &1878847921
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1398221577}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 40b80dbfce37697419dbc95b8c48e201, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1989747751
 GameObject:
   m_ObjectHideFlags: 3
@@ -4751,11 +4803,12 @@ PrefabInstance:
         mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089","$version":"A"},"$version":"A"},{"name":"Scene
         Camera","value":{"$content":0,"$type":"UnityEngine.Object"},"typeHandle":{"Identification":"UnityEngine.Camera,
         UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null","$version":"A"},"$version":"A"},{"name":"Weapon","value":{"$content":1,"$type":"UnityEngine.Object"},"typeHandle":{"Identification":"Unity.VisualScripting.ScriptMachine,
-        Unity.VisualScripting.Flow, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null","$version":"A"},"$version":"A"}],"$version":"A"},"$version":"A"}}'
+        Unity.VisualScripting.Flow, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null","$version":"A"},"$version":"A"},{"name":"Pistol","value":{"$content":2,"$type":"UnityEngine.Object"},"typeHandle":{"Identification":"UnityEngine.GameObject,
+        UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null","$version":"A"},"$version":"A"}],"$version":"A"},"$version":"A"}}'
       objectReference: {fileID: 0}
     - target: {fileID: 4746138739099634968, guid: fe4839eb733011a49b0e62723a47f111, type: 3}
       propertyPath: _data._objectReferences.Array.size
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 4746138739099634968, guid: fe4839eb733011a49b0e62723a47f111, type: 3}
       propertyPath: _data._objectReferences.Array.data[0]
@@ -4765,6 +4818,10 @@ PrefabInstance:
       propertyPath: _data._objectReferences.Array.data[1]
       value: 
       objectReference: {fileID: 741052588}
+    - target: {fileID: 4746138739099634968, guid: fe4839eb733011a49b0e62723a47f111, type: 3}
+      propertyPath: _data._objectReferences.Array.data[2]
+      value: 
+      objectReference: {fileID: 741052577}
     - target: {fileID: 5491318685764264903, guid: fe4839eb733011a49b0e62723a47f111, type: 3}
       propertyPath: m_Camera
       value: 
@@ -4850,13 +4907,44 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Weapon
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 8395965025113313144, guid: fe4839eb733011a49b0e62723a47f111, type: 3}
+      propertyPath: m_Size.x
+      value: 0.56630015
+      objectReference: {fileID: 0}
+    - target: {fileID: 8395965025113313144, guid: fe4839eb733011a49b0e62723a47f111, type: 3}
+      propertyPath: m_Size.y
+      value: 1.003121
+      objectReference: {fileID: 0}
+    - target: {fileID: 8395965025113313144, guid: fe4839eb733011a49b0e62723a47f111, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8395965025113313144, guid: fe4839eb733011a49b0e62723a47f111, type: 3}
+      propertyPath: m_Offset.x
+      value: 0.0024738163
+      objectReference: {fileID: 0}
+    - target: {fileID: 8395965025113313144, guid: fe4839eb733011a49b0e62723a47f111, type: 3}
+      propertyPath: m_Offset.y
+      value: 0.0015605688
+      objectReference: {fileID: 0}
+    - target: {fileID: 8395965025113313144, guid: fe4839eb733011a49b0e62723a47f111, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 6283703752487318592, guid: fe4839eb733011a49b0e62723a47f111, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects:
     - targetCorrespondingSourceObject: {fileID: 2438050859030510488, guid: fe4839eb733011a49b0e62723a47f111, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1586493162}
     m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 3605877376935426326, guid: fe4839eb733011a49b0e62723a47f111, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1878847911}
+    - targetCorrespondingSourceObject: {fileID: 3605877376935426326, guid: fe4839eb733011a49b0e62723a47f111, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1878847921}
     - targetCorrespondingSourceObject: {fileID: 8049427012400254457, guid: fe4839eb733011a49b0e62723a47f111, type: 3}
       insertIndex: -1
       addedObject: {fileID: 741052586}
