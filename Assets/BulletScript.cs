@@ -15,10 +15,13 @@ public class BulletScript : MonoBehaviour
             case "Wall":
                 Destroy(gameObject);
                 break;
-            case "Enemy":
-                Destroy(gameObject);
-                other.gameObject.GetComponent<EnemyController>().TakeDamage(damage);
-                break;
+        }
+
+        if (other.CompareTag("Enemy"))
+        {
+            other.gameObject.GetComponent<EnemyController>().TakeDamage(damage);
+            pointsTracker.Instance.AddScore(10);
+            Destroy(gameObject);
         }
     }
 

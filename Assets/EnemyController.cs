@@ -6,10 +6,9 @@ using UnityEngine;
 public class EnemyController : MonoBehaviour
 {
     // Start is called before the first frame update
-    public Transform attackPoint;       // Empty child object at the fist/weapon
-    public float attackRange = 0.5f;
-    public int attackDamage = 10;
+    public int attackDamage = 1;
     public LayerMask playerLayer;
+    private bool hasDealtDamage = false;
 
     void OggerEnter2D(Collider2D collision)
     {
@@ -29,12 +28,26 @@ public class EnemyController : MonoBehaviour
 
     }
 
+    public void HasAttacked()
+    {
+        hasDealtDamage = false;
+    }
+
     public void OnAttackHit()
     {
+        if (hasDealtDamage)
+        {
+            return;
+        }
+
+        hasDealtDamage = true;
+
         GameObject player = Variables.Scene(this).Get<GameObject>("Player");
 
         int playerHealth = Variables.Object(player).Get<int>("Health");
+
         playerHealth -= attackDamage;
+
         Variables.Object(player).Set("Health", playerHealth);
     }
 
