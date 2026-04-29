@@ -14171,6 +14171,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d2fe5546f775c47d2820aa5e8a715f53, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &741052593
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 741052577}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e04d985d99bbe4f4ba95b681870a22d9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &749276736
 GameObject:
   m_ObjectHideFlags: 0
@@ -15495,6 +15507,11 @@ PrefabInstance:
         Ammo","value":{"$content":12,"$type":"System.Int32"},"typeHandle":{"Identification":"System.Int32,
         mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089","$version":"A"},"$version":"A"},{"name":"Reserved
         Ammo","value":{"$content":24,"$type":"System.Int32"},"typeHandle":{"Identification":"System.Int32,
+        mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089","$version":"A"},"$version":"A"},{"name":"Max
+        Clip","value":{"$content":12,"$type":"System.Int32"},"typeHandle":{"Identification":"System.Int32,
+        mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089","$version":"A"},"$version":"A"},{"name":"Ammo
+        Needed","value":{"$content":0,"$type":"System.Int32"},"typeHandle":{"Identification":"System.Int32,
+        mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089","$version":"A"},"$version":"A"},{"name":"AmmoToAdd","value":{"$content":0,"$type":"System.Int32"},"typeHandle":{"Identification":"System.Int32,
         mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089","$version":"A"},"$version":"A"}],"$version":"A"},"$version":"A"}}'
       objectReference: {fileID: 0}
     - target: {fileID: 7714684177763546833, guid: fe4839eb733011a49b0e62723a47f111, type: 3}
@@ -15606,6 +15623,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 8049427012400254457, guid: fe4839eb733011a49b0e62723a47f111, type: 3}
       insertIndex: -1
       addedObject: {fileID: 741052586}
+    - targetCorrespondingSourceObject: {fileID: 8049427012400254457, guid: fe4839eb733011a49b0e62723a47f111, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 741052593}
   m_SourcePrefab: {fileID: 100100000, guid: fe4839eb733011a49b0e62723a47f111, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
