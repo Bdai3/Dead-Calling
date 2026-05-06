@@ -11,7 +11,24 @@
 
 
 ## Milestone 2 Devlog
-Milestone 2 Devlog goes here.
+### Part 1
+1. Create a point where a script will run to spawn enemies
+    1. Add empty object to the game
+    2. Visual script that will instantiate the zombie object at the given point
+    3. Add an timer to script that will spawn zombies at certain intervals
+    4. Set up a script to limit the max amount of zombies that can be spawn per round
+2. When player clears enemies, move to next round with increased enemy spawns
+    1. If player eliminates the max amount of zombies for that round, increase the max zombie limit within script
+    2. Create new variable within script called Round
+    3. Add one to Round per time the player eliminates the maximum zombies for the previous round
+    4. Create UI element that increases and displays with the round count variable
+
+### Part 2
+1. 
+### Part 3
+1. 
+<img width="1561" height="443" alt="image" src="https://github.com/user-attachments/assets/b865b962-425f-46cf-aed4-97f7df489e88" />
+
 ## Milestone 3 Devlog
 Milestone 3 Devlog goes here.
 ## Milestone 4 Devlog
