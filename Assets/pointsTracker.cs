@@ -23,7 +23,7 @@ public class pointsTracker : MonoBehaviour
         points += amount;
 
         Variables.Object(player).Set("Points", points);
-        scoreText.text = "Score: " + points;
+        scoreText.text = "Points: " + points;
     }
 
     public void subtractScore(int amount)
@@ -34,6 +34,6 @@ public class pointsTracker : MonoBehaviour
         points -= amount;
 
         Variables.Object(player).Set("Points", points);
-        scoreText.text = "Score: " + points;
+        scoreText.text = "Points: " + points;
     }
 }
