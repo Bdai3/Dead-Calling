@@ -24,7 +24,8 @@
     4. Create UI element that increases and displays with the round count variable
 
 ### Part 2
-1. 
+1. Overall I think writing all the steps out does help me visualize the code better and get a sense of which nodes I'm going to need to create this feature. To improve the breakdown, I wish I knew which nodes I needed specifically so that the process of implementation would be a lot more simple. So adding more details would've been very helpful, however it still allowed me to break down the steps and it felt like going through small checkpoints as I was implementing the new feature.
+   
 ### Part 3
 1. 
 <img width="1561" height="443" alt="image" src="https://github.com/user-attachments/assets/b865b962-425f-46cf-aed4-97f7df489e88" />
