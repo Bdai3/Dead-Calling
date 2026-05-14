@@ -12,16 +12,18 @@
 
 ## Milestone 2 Devlog
 ### Part 1
+#### Wave Spawnner
 1. Create a point where a script will run to spawn enemies
     1. Add empty object to the game
-    2. Visual script that will instantiate the zombie object at the given point
+    2. Create visual script that will instantiate the zombie object at the given point
     3. Add an timer to script that will spawn zombies at certain intervals
     4. Set up a script to limit the max amount of zombies that can be spawn per round
 2. When player clears enemies, move to next round with increased enemy spawns
     1. If player eliminates the max amount of zombies for that round, increase the max zombie limit within script
-    2. Create new variable within script called Round
-    3. Add one to Round per time the player eliminates the maximum zombies for the previous round
-    4. Create UI element that increases and displays with the round count variable
+    2. Add variable to track number of zombies killed by player
+    3. Create new variable within script called Round
+    4. Add one to Round per time the player eliminates the maximum zombies for the previous round
+    5. Create UI element that increases and displays with the round count variable
 
 ### Part 2
 1. Overall I think writing all the steps out does help me visualize the code better and get a sense of which nodes I'm going to need to create this feature. To improve the breakdown, I wish I knew which nodes I needed specifically so that the process of implementation would be a lot more simple. So adding more details would've been very helpful, however it still allowed me to break down the steps and it felt like going through small checkpoints as I was implementing the new feature.
