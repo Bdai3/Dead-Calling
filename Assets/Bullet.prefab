@@ -56,7 +56,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+  - {fileID: 2100000, guid: 8fe974e56fee3754a82c3e51d5006696, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -102,6 +102,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rb: {fileID: 594268899802109635}
   damage: 1
+  hitEffect: {fileID: 7791810806679837989, guid: 2f1de32d1cf41894a962a0ff05cb1d20, type: 3}
 --- !u!50 &594268899802109635
 Rigidbody2D:
   serializedVersion: 4
