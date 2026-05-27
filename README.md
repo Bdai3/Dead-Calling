@@ -44,6 +44,9 @@ This is my PerkShine shader graph which is used to make the player health upgrad
 ### Part 2
 Based on feedback, I've lowered the round color on the bottom left since players felt that it was to bright before. I've also added a light shader to the bullet to make it brighter, a explosion effect when the bullet collides with enemy or wall, UI pop up when next to purchasables, fixed gun desync when players run into walls, fixed player jittering when running into a wall, removed the open fence sprite to help confusion with walkable areas, and fixed error where players could buy the health perk over and over to heal.  
 
+### Part 3
+A new feature I added, was the purchasable gun upgrade at the bottom of the map. Players can now buy the door towards the bottom left of the map and spend 5000 points to upgrade their gun which then will become very powerful. This will allow the player to get through rounds quicker and use less ammo to do so. This will effect the main gameplay loop alot since it makes the game easier but it does make you gain less points per kill since you'll be killing the zombies faster than before (you gain points per bullet hit). 
+
 ## Milestone 4 Devlog
 Milestone 4 Devlog goes here.
 ## Final Devlog
