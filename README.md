@@ -39,7 +39,10 @@
 ### Part 1
 <img width="1085" height="598" alt="image" src="https://github.com/user-attachments/assets/576a08ba-269f-4010-a034-f6665011b4d6" />
 
-This is my PerkShine shader graph which is used to make the player upgrade graph glow. In it, I use the time node and a 
+This is my PerkShine shader graph which is used to make the player health upgrade statue glow. In it, I use the time node and multiply it by a value of 2 so that time is sped up so that the animation players faster. After multplying time, I feed it into a sine node which then creates this blinking/oscillation effect since sine waves go up and down (from -1 to 1) and when multplied by time, it'll create moments of darkness and light. Then it goes into a remap node which shifts the intensity of the brightness of the color. Then from the top section we multiply the maintex with the glow color (in my case this bright red) and multiply it by the remap to create a red blinking animation. 
+
+### Part 2
+Based on feedback, I've lowered the round color on the bottom left since players felt that it was to bright before. I've also added a light shader to the bullet to make it brighter, a explosion effect when the bullet collides with enemy or wall, UI pop up when next to purchasables, fixed gun desync when players run into walls, fixed player jittering when running into a wall, removed the open fence sprite to help confusion with walkable areas, and fixed error where players could buy the health perk over and over to heal.  
 
 ## Milestone 4 Devlog
 Milestone 4 Devlog goes here.
