@@ -30,4 +30,9 @@ public class BulletScript : MonoBehaviour
         }
     }
 
+    void setDmg(int dmg)
+    {
+        damage = dmg;
+    }
+
 }
