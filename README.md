@@ -36,7 +36,11 @@
 1. I use the Unity animator on my character, gun, and zombies. I use it to play the correct animations depending on state and direction which is done through a blend tree with conditions. 
 
 ## Milestone 3 Devlog
-Milestone 3 Devlog goes here.
+### Part 1
+<img width="1085" height="598" alt="image" src="https://github.com/user-attachments/assets/576a08ba-269f-4010-a034-f6665011b4d6" />
+
+This is my PerkShine shader graph which is used to make the player upgrade graph glow. In it, I use the time node and a 
+
 ## Milestone 4 Devlog
 Milestone 4 Devlog goes here.
 ## Final Devlog
