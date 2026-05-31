@@ -6,6 +6,8 @@ using UnityEngine;
 public class EnemyController : MonoBehaviour
 {
     // Start is called before the first frame update
+    [SerializeField] private AudioClip[] damageSoundClips;
+    [SerializeField] private AudioClip[] deathSoundClips;
     public int attackDamage = 1;
     public LayerMask playerLayer;
     private bool hasDealtDamage = false;
@@ -20,12 +22,19 @@ public class EnemyController : MonoBehaviour
 
     public void TakeDamage(int damageAmount)
     {
+        SoundFXManager.instance.PlayRandomSoundFXClip(damageSoundClips, transform, .5f);
+
         int currentHealth = Variables.Object(gameObject).Get<int>("Health");
 
         currentHealth -= damageAmount;
 
         Variables.Object(gameObject).Set("Health", currentHealth);
 
+    }
+
+    public void DeathFX()
+    {
+        SoundFXManager.instance.PlayRandomSoundFXClip(deathSoundClips, transform, .5f);
     }
 
     public void HasAttacked()

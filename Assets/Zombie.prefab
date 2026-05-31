@@ -138,10 +138,14 @@ MonoBehaviour:
       UnityEngine.AIModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null","$version":"A"},"$version":"A"},{"name":"Zom","value":{"$content":1,"$type":"UnityEngine.Object"},"typeHandle":{"Identification":"UnityEngine.GameObject,
       UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null","$version":"A"},"$version":"A"},{"name":"Distance","value":{"$content":0.0,"$type":"System.Single"},"typeHandle":{"Identification":"System.Single,
       mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089","$version":"A"},"$version":"A"},{"name":"canAttack","value":{"$content":true,"$type":"System.Boolean"},"typeHandle":{"Identification":"System.Boolean,
-      mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089","$version":"A"},"$version":"A"}],"$version":"A"},"$version":"A"}}'
+      mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089","$version":"A"},"$version":"A"},{"name":"DeathAudio1","value":{"$content":2,"$type":"UnityEngine.Object"},"typeHandle":{"Identification":"UnityEngine.AudioClip,
+      UnityEngine.AudioModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null","$version":"A"},"$version":"A"},{"name":"DeathAudio2","value":{"$content":3,"$type":"UnityEngine.Object"},"typeHandle":{"Identification":"UnityEngine.AudioClip,
+      UnityEngine.AudioModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null","$version":"A"},"$version":"A"}],"$version":"A"},"$version":"A"}}'
     _objectReferences:
     - {fileID: 6428254684476523130}
     - {fileID: 1390784153482922957}
+    - {fileID: 8300000, guid: 0b3ca20c6d0882243bbd3cc9bf4d788c, type: 3}
+    - {fileID: 8300000, guid: 2841e076232a828439d5a95b025163fa, type: 3}
 --- !u!114 &5563928606090997106
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -248,6 +252,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1370567f8caee2847817e46c518b9fb0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  damageSoundClips:
+  - {fileID: 8300000, guid: 388a87bb1e0fd5f49baf2681fdf27f5c, type: 3}
+  - {fileID: 8300000, guid: f67a10fc923a5114bbcce9f08c99cdf7, type: 3}
+  - {fileID: 8300000, guid: d67a50aebcc337d4693015a662c9d7aa, type: 3}
+  deathSoundClips:
+  - {fileID: 8300000, guid: 0b3ca20c6d0882243bbd3cc9bf4d788c, type: 3}
+  - {fileID: 8300000, guid: 2841e076232a828439d5a95b025163fa, type: 3}
   attackDamage: 1
   playerLayer:
     serializedVersion: 2
