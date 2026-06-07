@@ -47,9 +47,10 @@
 ### Part 3
 1. A new feature I added, was the purchasable gun upgrade at the bottom of the map. Players can now buy the door towards the bottom left of the map and spend 5000 points to upgrade their gun which then will become very powerful. This will allow the player to get through rounds quicker and use less ammo to do so. This will effect the main gameplay loop alot since it makes the game easier but it does make you gain less points per kill since you'll be killing the zombies faster than before (you gain points per bullet hit). 
 
-## Milestone 4 Devlog
-Milestone 4 Devlog goes here.
 ## Final Devlog
-Final Devlog goes here.
+### Part 1
+1. My game at its core is a round based survival horror game where players can buy upgrades and become powerful and take out large hoards of enemies. Currently the content in the game reflect this core gameplay loop. Players can updrage their weapon which allows them to deal extra damage per shot, they can buy ammo at any point by interacting with the ammo crate, and interact with a glowing godess statue which will grant them extra health which improves survivability. I also have implemented a door feature where players must spend points inorder to unlock new parts of the map. This will encourage players to explore and open all the maps since through the door, they find new upgrades and other purchasables. This is esstenitally the core loop for players in the full game. Players will be surviving as long as possible and buying upgrades and exploring as the rounds increase. In the full game however, there would be different weapons and perks the players can get. Also there would be an optional quest on the map where if the players complete each step required, will lead to an boss fight. 
+
+
 ## Open-source assets
 - Cite any external assets used here!
