@@ -57,4 +57,14 @@
 
 
 ## Open-source assets
-- Cite any external assets used here!
+### Map/Actions
+1. [Post-Apocalypse Pixel Art](https://itch.io/queue/c/3764747/25d?game_id=3578422&password=)
+2. [Pixel Effects](https://untiedgames.itch.io/super-pixel-effects-gigapack)
+3. [Map Assets](https://cainos.itch.io/pixel-art-top-down-basic)
+
+### Audio
+1. [Zombie Shooter Audio Pack](https://tizianobellu.itch.io/zombie)
+2. [For the Empire BGM](https://deadric336.itch.io/for-the-empire)
+
+
+
